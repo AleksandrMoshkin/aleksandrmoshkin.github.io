@@ -1,0 +1,234 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 12px;
+  font-family: Oswald; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.grid {
+  display: grid; }
+
+.flex {
+  display: flex; }
+
+/* кнопка */
+.btn {
+  width: 15vw;
+  padding: 1rem 0;
+  margin: 0 0.8rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 6;
+  transition: all 0.5s; }
+
+/* Заголовок */
+header {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/header.jpg);
+  background-size: cover;
+  position: relative; }
+  header:before {
+    content: "";
+    background: #ccc;
+    opacity: 0.4;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute; }
+  header h1 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 5rem;
+    z-index: 3; }
+  header .btn-container {
+    flex-direction: row; }
+    header .btn-container .html5-item {
+      background: orange;
+      box-shadow: 5px 5px 7px #b37400; }
+      header .btn-container .html5-item:hover {
+        box-shadow: 3px 3px 7px #664200; }
+    header .btn-container .css3-item {
+      background: #2f8dee;
+      box-shadow: 5px 5px 7px #1067c1; }
+      header .btn-container .css3-item:hover {
+        box-shadow: 3px 3px 7px #0a417a; }
+    header .btn-container .js-item {
+      background: #3fb310;
+      box-shadow: 5px 5px 7px #266d0a; }
+      header .btn-container .js-item:hover {
+        box-shadow: 3px 3px 7px #0e2703; }
+
+/* 1 секция. Инфо пользователя */
+.info-container {
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  background: #f5f5f5; }
+  .info-container .description {
+    width: 40%;
+    padding: 2rem;
+    border-right: 1px solid #808080; }
+    .info-container .description h2 {
+      margin-bottom: 3rem;
+      font-size: 2rem; }
+    .info-container .description p {
+      margin: 1.4rem 0;
+      font-size: 1.4rem; }
+  .info-container .bg {
+    width: 40%;
+    position: relative; }
+    .info-container .bg:before {
+      content: "";
+      top: 3.2rem;
+      bottom: 1rem;
+      left: 4rem;
+      right: 2.5rem;
+      position: absolute;
+      background: url(../img/abb.jpg);
+      background-size: cover; }
+    .info-container .bg img {
+      display: block;
+      max-width: 100%;
+      height: auto; }
+
+/* 2 секция - форма */
+.form-container {
+  padding: 3rem 4rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1.6rem;
+  background: #525252; }
+  .form-container input {
+    padding: 2rem 0 2rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    background: #949494; }
+  .form-container .btn-call {
+    background: #2f8dee;
+    box-shadow: 5px 5px 7px #1067c1;
+    border: none;
+    font-family: sans-serif;
+    font-size: 2rem;
+    text-transform: none; }
+    .form-container .btn-call:hover {
+      box-shadow: 3px 3px 7px #0a417a; }
+
+/* 3 секция Портфолио */
+.portfolio {
+  padding: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 25vh;
+  grid-gap: 1rem; }
+  .portfolio-item {
+    min-height: 25vh;
+    padding: 1.4rem;
+    cursor: pointer;
+    position: relative; }
+    .portfolio-item span {
+      font-family: sans-serif;
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: bold;
+      z-index: 5; }
+    .portfolio-item:before {
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: #808080;
+      opacity: 0.3;
+      transition: opacity 1s ease;
+      position: absolute;
+      z-index: 3; }
+    .portfolio-item:nth-child(1) {
+      background: url(../img/1.jpg);
+      background-size: cover;
+      grid-column: 1/3; }
+    .portfolio-item:nth-child(2) {
+      background: url(../img/2.jpg);
+      background-size: cover; }
+    .portfolio-item:nth-child(3) {
+      background: url(../img/3.jpg);
+      background-size: cover; }
+    .portfolio-item:nth-child(4) {
+      background: url(../img/4.jpg);
+      background-size: cover;
+      grid-column: 2/4; }
+    .portfolio-item:nth-child(5) {
+      background: url(../img/5.png);
+      background-size: cover;
+      grid-column: 1/3;
+      grid-row: 3/5; }
+    .portfolio-item:nth-child(6) {
+      background: url(../img/6.png);
+      background-size: cover; }
+    .portfolio-item:nth-child(7) {
+      background: url(../img/7.jpg);
+      background-size: cover; }
+    .portfolio-item:nth-child(8) {
+      background: url(../img/8.jpg);
+      background-size: cover;
+      grid-column: 1/-1; }
+
+/* 4 секция Мой блог */
+.my_blog {
+  flex-direction: column;
+  align-items: center; }
+  .my_blog h2 {
+    width: 80%;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #808080; }
+  .my_blog .container {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem; }
+    .my_blog .container .blog-item {
+      grid-template-columns: repeat(1fr, 1fr);
+      overflow: hidden;
+      background-color: #f5f5f5;
+      transition: background-color 0.3s ease;
+      color: #808080; }
+      .my_blog .container .blog-item:hover {
+        background: #d9d9d9; }
+      .my_blog .container .blog-item:nth-child(1) {
+        grid-column: 1/2; }
+        .my_blog .container .blog-item:nth-child(1) .blog-item-img {
+          height: 250px;
+          background-size: cover;
+          background-position: center;
+          transition: transform 0.5s ease;
+          background: url(../img/1.jpg); }
+          .my_blog .container .blog-item:nth-child(1) .blog-item-img:hover {
+            transform: scale(1.1) translateY(-15px); }
+        .my_blog .container .blog-item:nth-child(1) .blog-item-description h3 {
+          font-weight: bold;
+          font-size: 1.6rem; }
+        .my_blog .container .blog-item:nth-child(1) .blog-item-description p {
+          font-size: 1.4rem; }
+      .my_blog .container .blog-item:nth-child(2) {
+        grid-column: 2/3; }
+      .my_blog .container .blog-item:nth-child(3) {
+        grid-column: 3/5; }
+      .my_blog .container .blog-item:nth-child(4) {
+        grid-column: 1/3; }
+      .my_blog .container .blog-item:nth-child(5) {
+        grid-column: 3/4; }
+      .my_blog .container .blog-item:nth-child(6) {
+        grid-column: 4/5; }

@@ -7,6 +7,8 @@ var timer = {
 		if (timer.time == 0){
 			timer.timerOn.innerHTML = "0";
 			timer.timerElem.appendChild(timer.timerOn);
+			window.clearInterval(timerStart);
+			alert("Конец игры! Ваш счет" + score.beginScore);
 		}
 		else {
 			timer.timerOn.innerHTML = timer.time;
@@ -15,7 +17,7 @@ var timer = {
 		}
 	}
 }
-setInterval(timer.tiker, 1000);//запускаем таймер
+var timerStart = setInterval(timer.tiker, 1000);//запускаем таймер
 
 //Task
 var task = {
@@ -81,3 +83,5 @@ var score = {
 	},
 }
 score.addScore();
+
+

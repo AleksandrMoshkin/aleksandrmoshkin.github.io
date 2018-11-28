@@ -68,6 +68,7 @@ footer{
   cursor: pointer;
   color: #000;
   font-weight: bolder;
+  display: disab
 }
 .select:hover {
   background: blue;
